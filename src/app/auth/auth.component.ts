@@ -1,6 +1,14 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Apollo } from "apollo-angular";
+import { login } from "../graphql.module";
+import { ActivatedRoute, Router } from "@angular/router";
 import { AuthService } from "../services/auth.service";
-import { Router } from "@angular/router";
+// import { User } from "../profile/profile.interface";
+
+type LoginData = {
+  loginWithBasic: { token: string; connected: Boolean };
+};
 
 @Component({
   selector: "app-auth",
@@ -8,24 +16,61 @@ import { Router } from "@angular/router";
   styleUrls: ["./auth.component.scss"]
 })
 export class AuthComponent implements OnInit {
-  authStatus: boolean;
+  validateForm: FormGroup;
+  user: any;
+  password: string = "";
+  wrongData: Boolean = false;
+  passwordVisible: Boolean = false;
+  loginLoading: Boolean = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  submitForm(): void {
+    for (const i in this.validateForm.controls) {
+      this.validateForm.controls[i].markAsDirty();
+      this.validateForm.controls[i].updateValueAndValidity();
+    }
+    if (this.validateForm.status === "VALID") {
+      this.loginLoading = true;
+      this.user = this.validateForm.value.userName;
+      this.password = this.validateForm.value.password;
+      this.login();
+    }
+  }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    public apollo: Apollo,
+    private fb: FormBuilder,
+    private auth: AuthService
+  ) {}
 
-  ngOnInit() {
-    this.authStatus = this.authService.isAuth;
+  login() {
+    this.apollo
+      .mutate<LoginData>({
+        mutation: login,
+        variables: {
+          login: this.user,
+          pass: this.password,
+          useCookie: false
+        }
+      })
+      .subscribe(
+        response => {
+          this.wrongData = false;
+          this.loginLoading = false;
+          localStorage.setItem("token", response.data.loginWithBasic.token);
+          window.location.href = "/";
+        },
+        err => {
+          this.wrongData = true;
+          this.loginLoading = false;
+        }
+      );
   }
 
-  onSignIn() {
-    this.authService.signIn().then(() => {
-      console.log("Sign in successful!");
-      this.authStatus = this.authService.isAuth;
-      this.router.navigate(["home"]);
+  ngOnInit(): void {
+    this.validateForm = this.fb.group({
+      userName: [null, [Validators.required]],
+      password: [null, [Validators.required]]
     });
-  }
-
-  onSignOut() {
-    this.authService.signOut();
-    this.authStatus = this.authService.isAuth;
   }
 }

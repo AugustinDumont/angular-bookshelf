@@ -1,42 +1,56 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+
+import { ApolloModule } from "apollo-angular";
+import { HttpLinkModule } from "apollo-angular-link-http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { GraphQLModule } from "./graphql.module";
+import { NgZorroAntdModule, NZ_I18N, en_US } from "ng-zorro-antd";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { NgZorroAntdModule, NZ_I18N, fr_BE } from "ng-zorro-antd";
-import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { registerLocaleData } from "@angular/common";
-import fr from "@angular/common/locales/fr";
-import { HomeComponent } from "./home/home.component";
+import en from "@angular/common/locales/en";
+import { GraphQLModule } from "./apollo.config";
 import { AuthComponent } from "./auth/auth.component";
-import { AuthService } from "./services/auth.service";
-import { AuthGuard } from "./services/auth-guard";
+// import { RegisterComponent } from "./register/register.component";
+// import { BookItemComponent } from "./book-item/book-item.component";
+// import { BookListComponent } from "./book-list/book-list.component";
+// import { AddBookComponent } from "./add-book/add-book.component";
+// import { EditBookComponent } from "./edit-book/edit-book.component";
+import { ProfileComponent } from "./profile/profile.component";
 import { FourOhFourComponent } from "./four-oh-four/four-oh-four.component";
+import { HomeComponent } from "./home/home.component";
 
-registerLocaleData(fr);
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     AuthComponent,
-    FourOhFourComponent
+    // RegisterComponent,
+    // BookItemComponent,
+    // BookListComponent,
+    // AddBookComponent,
+    // EditBookComponent,
+    ProfileComponent,
+    FourOhFourComponent,
+    HomeComponent
   ],
   imports: [
+    HttpLinkModule,
     BrowserModule,
-    AppRoutingModule,
     GraphQLModule,
-    HttpClientModule,
+    AppRoutingModule,
+    ApolloModule,
     NgZorroAntdModule,
     FormsModule,
-    BrowserAnimationsModule,
-    NgbModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: fr_BE }, AuthService, AuthGuard],
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
