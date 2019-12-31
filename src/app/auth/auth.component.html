@@ -1,59 +1,66 @@
-<div class="container">
-  <form
-    nz-form
-    style="margin: 0 auto;"
-    [formGroup]="validateForm"
-    class="login-form"
-    (ngSubmit)="submitForm()"
-  >
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your username!">
-        <nz-input-group nzPrefixIcon="user">
-          <input
-            type="text"
-            nz-input
-            formControlName="userName"
-            placeholder="Username"
-          />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your password!">
-        <nz-input-group nzPrefixIcon="lock" [nzSuffix]="suffixTemplate">
-          <input
-            [type]="passwordVisible ? 'text' : 'password'"
-            nz-input
-            formControlName="password"
-            placeholder="Password"
-          />
-        </nz-input-group>
+<div id="log_container">
+  <div id="register">
+    <h1>Register</h1>
 
-        <ng-template #suffixTemplate>
-          <i
-            nz-icon
-            [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
-            (click)="passwordVisible = !passwordVisible"
-          ></i>
-        </ng-template>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-control>
-        <span *ngIf="wrongData" style="color: #f5222d;"
-          >Wrong username or password</span
-        >
-        <button
-          nz-button
-          [nzLoading]="loginLoading"
-          class="login-form-button"
-          [nzType]="'primary'"
-        >
-          Log in
-        </button>
-        Or
-        <a routerLink="/register">register now!</a>
-      </nz-form-control>
-    </nz-form-item>
-  </form>
+    <div id="connect">
+      <form>
+        <label>Email:</label>
+        <input type="email" id="email" required />
+
+        <label>Password: </label>
+        <input type="password" id="password" required />
+
+        <label>Confirm password: </label>
+        <input type="password" id="password2" required />
+
+        <label>Username: </label>
+        <input id="regName" type="text" required />
+
+        <div id="regSpinner">
+          <div class="d-flex justify-content-center" id="flexLog">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+        <p id="regError" class="error"></p>
+        <p id="regValidate"></p>
+
+        <button (click)="registerUser()" type="button">Register</button>
+
+        <button (click)="swipeForm()">Back to Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="logIn">
+    <h1>Log In</h1>
+
+    <div id="connect">
+      <form>
+        <input type="text" id="logName" placeholder="Your username" />
+
+        <input id="logPass" type="password" placeholder="Password" />
+
+        <button class="login-form-button" (click)="logIn()">Log in</button>
+
+        <div id="logSpinner">
+          <div class="d-flex justify-content-center ">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+        <p id="logError" class="error"></p>
+      </form>
+    </div>
+
+    <div id="create">
+      <button (click)="swipeForm()" id="createBtn">
+        <span href="#">Register</span>
+      </button>
+    </div>
+  </div>
 </div>
