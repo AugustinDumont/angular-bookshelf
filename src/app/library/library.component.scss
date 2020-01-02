@@ -111,8 +111,12 @@ nz-affix {
   width: 100%;
 }
 .Search {
-  background-color: #fff9ee;
+  background-color: #55dbcb;
+  opacity: 0.6;
   margin-top: -19px !important;
+  &:hover {
+    opacity: 1;
+  }
 }
 #searchBar {
   display: flex;

@@ -25,67 +25,47 @@
 
 h1 {
   text-align: center;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: -0.5px;
-  color: #333;
-  margin: 20px 0;
+  font-size: 35px;
+  color: #55dbcb;
+  margin: 40px;
 }
 
 #connect {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   width: 303px;
   height: auto;
   background-color: #fff;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #d8dee2;
-  border-radius: 5px;
+  border: 2px dashed #75e4b3;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 
   input {
-    margin-top: 5px;
-    margin-bottom: 15px;
     width: 100%;
-    height: 35px;
-    padding: 6px 8px;
-    text-rendering: auto;
-    color: -internal-light-dark-color(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    cursor: text;
-    overflow: visible;
-    box-sizing: border-box;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid #d8dee2;
-    border-radius: 3px;
+    height: 30px;
+    background-color: #55dbcb;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    opacity: 0.6;
+    padding: 10px 5px;
+    margin-bottom: 10px;
   }
 
   button {
     width: 100%;
-    height: 34px;
-    text-align: center;
-    color: #fff;
-    background-color: #28a745;
-    background-image: linear-gradient(-180deg, #fdd866, #e69365 90%);
-    margin-top: 5px;
-    margin-bottom: 15px;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    background-repeat: repeat-x;
-    background-position: -1px -1px;
-    background-size: 110% 110%;
+    height: 30px;
+    background: linear-gradient(to top, #55dbcb, #75e4b3);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
     border: none;
-    border-radius: 0.25em;
-    -webkit-appearance: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    }
   }
 }
 
@@ -96,25 +76,16 @@ h1 {
   margin: 0 auto;
   padding: 12px 0;
   width: 305px;
-  margin-top: 16px;
-  border: 1px solid #d8dee2;
-  border-radius: 5px;
-  color: #24292e;
+  margin-top: 25px;
+  border: 2px dashed #75e4b3;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  color: #55dbcb;
 
   #createBtn {
     margin: 0;
     background: none;
     border: none;
-  }
-
-  span {
-    text-decoration: none;
-    color: #e69365;
-    cursor: pointer;
-  }
-
-  span:hover {
-    text-decoration: underline;
+    text-transform: uppercase;
   }
 }
 

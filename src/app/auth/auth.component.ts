@@ -36,10 +36,6 @@ export class AuthComponent implements OnInit {
 
   logIn() {
     let request = new Promise((resolve, reject) => {
-      document.getElementById("logError").textContent = "";
-
-      document.getElementById("logSpinner").style.display = "block";
-
       let logName = String(
         (<HTMLInputElement>document.getElementById("logName")).value
       );
@@ -48,16 +44,6 @@ export class AuthComponent implements OnInit {
         .value;
 
       this.AuthService.logInUser(this.router, this.apollo, logName, logPass);
-
-      setTimeout(() => {
-        document.getElementById("logSpinner").style.display = "none";
-
-        if (this.AuthService.report !== "null") {
-          document.getElementById("logError").textContent =
-            "Error : invalid credentials.";
-        }
-        this.count = this.count + 500;
-      }, this.count);
     });
   }
 
