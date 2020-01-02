@@ -40,7 +40,6 @@ export class ArticleComponent implements OnInit {
   myRateVote: number = 1;
   myRateString: String;
   myVoteToString: string[] = ["ONE", "TWO", "THREE", "FOUR", "FIVE"];
-  tooltips = ["terrible", "bad", "normal", "good", "wonderful"];
   isRent: boolean;
   isOwner: boolean = this.QueriesService.isNotBorrower;
   owner: string = "null";

@@ -2,7 +2,7 @@
   <!--HEADER -->
   <header>
     <div class="m-5">
-      <h1 class="text-center">BookShelf<br />Becode Library</h1>
+      <h1 class="text-center">Becode Library</h1>
     </div>
   </header>
 
@@ -36,6 +36,7 @@
               id="filterLang"
               (change)="filterLangProcess()"
             >
+              <option>No filter </option>
               <option>Français </option
               ><option>English </option></select
             >
@@ -45,7 +46,7 @@
               class="Filters"
               id="filterAvailable"
               (change)="filterAvailableProcess()"
-            >
+              ><option>No filter </option>
               <option>Available </option
               ><option>Not available </option></select
             >
@@ -89,7 +90,6 @@
             [(ngModel)]="booksReviews[i]"
             nzAllowHalf
             nzDisabled
-            [nzTooltips]="tooltips"
           ></nz-rate>
         </div>
       </div>
