@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { RouterModule, Routes } from "@angular/router";
 
 import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
 
 import { HttpHeaders } from "@angular/common/http";
 import { HttpClientModule } from "@angular/common/http";
@@ -27,13 +27,6 @@ import en from "@angular/common/locales/en";
 
 registerLocaleData(en);
 
-const appRoutes: Routes = [
-  { path: "", component: AuthComponent },
-  { path: "library", component: LibraryComponent },
-  { path: "article/:isbn", component: ArticleComponent },
-  { path: "**", component: ErrorComponent }
-];
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -41,12 +34,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
-    ),
     NgZorroAntdModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
@@ -75,7 +65,6 @@ export class AppModule {
     const authLink = new ApolloLink((operation, forward) => {
       operation.setContext({
         headers: {
-          // Remove this by const token ?
           Authorization: "Bearer " + this.AuthService.usrToken
         }
       });

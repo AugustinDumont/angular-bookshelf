@@ -32,12 +32,7 @@
 
         <p class="info_content">
           Rating:
-          <nz-rate
-            [(ngModel)]="bookTotalRate"
-            nzAllowHalf
-            nzDisabled
-            [nzTooltips]="tooltips"
-          ></nz-rate>
+          <nz-rate [(ngModel)]="bookTotalRate" nzAllowHalf nzDisabled></nz-rate>
           <nz-badge
             class="ratePop"
             [nzStyle]="{ backgroundColor: '#2b165b' }"
@@ -83,11 +78,7 @@
             placeholder="{{ toEdit }}"
             name="Comment note"
           ></textarea>
-          <nz-rate
-            class="rateForm"
-            [(ngModel)]="myRateVote"
-            [nzTooltips]="tooltips"
-          ></nz-rate>
+          <nz-rate class="rateForm" [(ngModel)]="myRateVote"></nz-rate>
           <button
             class="comment_button"
             *ngIf="!isEdit"
@@ -108,4 +99,4 @@
   </div>
 </main>
 
-<h1 id="report" class="animated">You do not rent this book.</h1>
+<h3 id="report" class="animated">You do not rent this book.</h3>
