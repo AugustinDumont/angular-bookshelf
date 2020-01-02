@@ -1,0 +1,458 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200102.144813.4853.0.001.json",
+    "dumpEventTime": "2020-01-02T14:48:13Z",
+    "dumpEventTimeStamp": "1577972893388",
+    "processId": 4853,
+    "cwd": "/home/becode/becode_projects/angular-bookshelf",
+    "commandLine": [
+      "/usr/bin/node",
+      "/home/becode/becode_projects/angular-bookshelf/node_modules/jest-worker/build/workers/processChild.js"
+    ],
+    "nodejsVersion": "v13.1.0",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "13.1.0",
+      "v8": "7.8.279.17-node.19",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "79",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v13.1.0/node-v13.1.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v13.1.0/node-v13.1.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.15.0-72-generic",
+    "osVersion": "#81-Ubuntu SMP Tue Nov 26 12:20:02 UTC 2019",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz",
+        "speed": 2594,
+        "user": 47834800,
+        "nice": 216400,
+        "sys": 17040000,
+        "idle": 373261900,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz",
+        "speed": 2594,
+        "user": 41488600,
+        "nice": 86300,
+        "sys": 16307600,
+        "idle": 174808300,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz",
+        "speed": 2594,
+        "user": 48571700,
+        "nice": 61100,
+        "sys": 17227000,
+        "idle": 171460700,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz",
+        "speed": 2594,
+        "user": 41871700,
+        "nice": 120500,
+        "sys": 15233300,
+        "idle": 174931500,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "wlo1",
+        "internal": false,
+        "mac": "f8:16:54:1f:97:49",
+        "address": "192.168.0.157",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "br-1748fa9a7eec",
+        "internal": false,
+        "mac": "02:42:c3:b2:75:f6",
+        "address": "172.21.0.1",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "br-dc2c7435a6f8",
+        "internal": false,
+        "mac": "02:42:ac:39:7a:06",
+        "address": "172.18.0.1",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlo1",
+        "internal": false,
+        "mac": "f8:16:54:1f:97:49",
+        "address": "fe80::9ae1:f856:a7de:8f9e",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 3
+      },
+      {
+        "name": "br-1748fa9a7eec",
+        "internal": false,
+        "mac": "02:42:c3:b2:75:f6",
+        "address": "fe80::42:c3ff:feb2:75f6",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 4
+      },
+      {
+        "name": "br-dc2c7435a6f8",
+        "internal": false,
+        "mac": "02:42:ac:39:7a:06",
+        "address": "fe80::42:acff:fe39:7a06",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 7
+      },
+      {
+        "name": "vethc8b8c62",
+        "internal": false,
+        "mac": "e6:17:6a:41:d7:0d",
+        "address": "fe80::e417:6aff:fe41:d70d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 12
+      },
+      {
+        "name": "veth0bcf79f",
+        "internal": false,
+        "mac": "76:95:2c:ad:6a:b3",
+        "address": "fe80::7495:2cff:fead:6ab3",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 16
+      },
+      {
+        "name": "veth5d43690",
+        "internal": false,
+        "mac": "f6:75:d1:3a:78:1a",
+        "address": "fe80::f475:d1ff:fe3a:781a",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 20
+      },
+      {
+        "name": "veth83fab75",
+        "internal": false,
+        "mac": "a2:0d:dd:1e:d9:e4",
+        "address": "fe80::a00d:ddff:fe1e:d9e4",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 22
+      }
+    ],
+    "host": "becode-HP-EliteBook-840-G1"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b10715",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x00000000009ec1cc",
+      "symbol": "node::OnFatalError(char const*, char const*) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b4611e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b46499",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf3535",
+      "symbol": " [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf3bc6",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d003fa",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d01305",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d03dac",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cca66b",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x000000000100eb9e",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000001391439",
+      "symbol": " [/usr/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2151137280,
+    "totalCommittedMemory": 2149440296,
+    "usedMemory": 2132742856,
+    "availableMemory": 48502952,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 33088,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 1264496,
+        "capacity": 1047456,
+        "used": 269976,
+        "available": 777480
+      },
+      "old_space": {
+        "memorySize": 1996075008,
+        "committedMemory": 1995801760,
+        "capacity": 1980878808,
+        "used": 1980878808,
+        "available": 0
+      },
+      "code_space": {
+        "memorySize": 1740800,
+        "committedMemory": 1467136,
+        "capacity": 1402656,
+        "used": 1402656,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1576960,
+        "committedMemory": 1488600,
+        "capacity": 930480,
+        "used": 930480,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 149336064,
+        "committedMemory": 149336064,
+        "capacity": 149225344,
+        "used": 149225344,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047456,
+        "used": 0,
+        "available": 1047456
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 203.099,
+    "kernelCpuSeconds": 3.67246,
+    "cpuConsumptionPercent": 196.925,
+    "maxRss": 2301259776,
+    "pageFaults": {
+      "IORequired": 22,
+      "IONotRequired": 1101087
+    },
+    "fsActivity": {
+      "reads": 7264,
+      "writes": 6104
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 88.6011,
+    "kernelCpuSeconds": 1.78099,
+    "cpuConsumptionPercent": 86.0782,
+    "fsActivity": {
+      "reads": 7136,
+      "writes": 3056
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
+    "DBUS_STARTER_ADDRESS": "unix:path=/run/user/1000/bus,guid=d10dcc0a1826efe9be287f495e0ca53c",
+    "LANG": "fr_BE.UTF-8",
+    "DISPLAY": ":0",
+    "SHLVL": "1",
+    "LOGNAME": "becode",
+    "LANGUAGE": "fr_BE:fr",
+    "INVOCATION_ID": "f2c03e30d0354070add39e02fe2c704a",
+    "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+    "XDG_VTNR": "2",
+    "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+    "PWD": "/home/becode/becode_projects/angular-bookshelf",
+    "JOURNAL_STREAM": "9:39237",
+    "GTK_IM_MODULE": "ibus",
+    "COLORTERM": "truecolor",
+    "XDG_SESSION_ID": "2",
+    "GNOME_TERMINAL_SCREEN": "/org/gnome/Terminal/screen/b7115e10_7de8_4423_950f_5c71568cd761",
+    "DESKTOP_SESSION": "ubuntu",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "GDMSESSION": "ubuntu",
+    "TEXTDOMAINDIR": "/usr/share/locale/",
+    "WINDOWPATH": "2",
+    "USERNAME": "becode",
+    "TEXTDOMAIN": "im-config",
+    "IM_CONFIG_PHASE": "2",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus,guid=d10dcc0a1826efe9be287f495e0ca53c",
+    "VTE_VERSION": "5202",
+    "DBUS_STARTER_BUS_TYPE": "session",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "GNOME_TERMINAL_SERVICE": ":1.589",
+    "QT4_IM_MODULE": "xim",
+    "_": "/home/becode/.npm-global/bin/ng",
+    "XDG_MENU_PREFIX": "gnome-",
+    "CLUTTER_IM_MODULE": "xim",
+    "GNOME_SHELL_SESSION_MODE": "ubuntu",
+    "QT_IM_MODULE": "ibus",
+    "XDG_SESSION_TYPE": "x11",
+    "SHELL": "/usr/bin/zsh",
+    "MANAGERPID": "2924",
+    "TERM": "xterm-256color",
+    "GTK_MODULES": "gail:atk-bridge",
+    "SESSION_MANAGER": "local/becode-HP-EliteBook-840-G1:@/tmp/.ICE-unix/2955,unix/becode-HP-EliteBook-840-G1:/tmp/.ICE-unix/2955",
+    "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+    "QT_ACCESSIBILITY": "1",
+    "PATH": "/home/becode/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "SSH_AGENT_PID": "3051",
+    "HOME": "/home/becode",
+    "XDG_CURRENT_DESKTOP": "ubuntu:GNOME",
+    "XMODIFIERS": "@im=ibus",
+    "USER": "becode",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "GPG_AGENT_INFO": "/run/user/1000/gnupg/S.gpg-agent:0:1",
+    "XDG_SEAT": "seat0",
+    "OLDPWD": "/home/becode/becode_projects/angular-bookshelf",
+    "ZSH": "/home/becode/.oh-my-zsh",
+    "PAGER": "less",
+    "LESS": "-R",
+    "LSCOLORS": "Gxfxcxdxbxegedabagacad",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "WEBPACK_DEV_SERVER": "true",
+    "JEST_WORKER_ID": "3",
+    "FORCE_COLOR": "1"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 16777216,
+      "hard": 16777216
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 4096,
+      "hard": 4096
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 31320,
+      "hard": 31320
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}
