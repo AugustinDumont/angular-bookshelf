@@ -7,9 +7,8 @@ export class QueriesServices extends Mutation {
   books: any;
   isEdit: boolean = false;
   editComment: String;
-  editNote : String;
-  isNotBorrower : boolean = false;
-
+  editNote: String;
+  isNotBorrower: boolean = false;
 
   // -> This function provide all the books and theses titles in the API. ** Take as parameter an instance of apollo **
 
@@ -30,8 +29,7 @@ export class QueriesServices extends Mutation {
                     note
                   }
                 }
-                lang
-                {
+                lang {
                   name
                 }
                 availabilities {
@@ -51,11 +49,8 @@ export class QueriesServices extends Mutation {
           this.books = value;
           return value;
         },
-        error => {
-        },
-        () => {
-
-        }
+        error => {},
+        () => {}
       );
   }
 
@@ -118,10 +113,8 @@ export class QueriesServices extends Mutation {
         value => {
           this.books = value;
         },
-        error => {
-        },
-        () => {
-        }
+        error => {},
+        () => {}
       );
   }
 
@@ -133,7 +126,7 @@ export class QueriesServices extends Mutation {
     $editor: String,
     $cover: String,
     $lang: String,
-    $school : String
+    $school: String
   ) {
     apollo
       .mutate({
@@ -160,9 +153,7 @@ export class QueriesServices extends Mutation {
         error => {
           this.books = "crash";
         },
-        () => {
-
-        }
+        () => {}
       );
   }
 
@@ -184,12 +175,8 @@ export class QueriesServices extends Mutation {
         value => {
           window.location.reload();
         },
-        error => {
- 
-        },
-        () => {
-
-        }
+        error => {},
+        () => {}
       );
   }
 
@@ -214,14 +201,9 @@ export class QueriesServices extends Mutation {
           this.isEdit = true;
           this.editComment = $comment;
           this.editNote = $vote;
-
         },
-        error => {
-
-        },
-        () => {
-
-        }
+        error => {},
+        () => {}
       );
   }
 
@@ -242,15 +224,10 @@ export class QueriesServices extends Mutation {
         value => {
           window.location.reload();
         },
-        error => {
-
-        },
-        () => {
-        
-        }
+        error => {},
+        () => {}
       );
   }
-
 
   returnBook(apollo: Apollo, $id: String) {
     apollo
@@ -272,11 +249,7 @@ export class QueriesServices extends Mutation {
         error => {
           this.isNotBorrower = true;
         },
-        () => {
-        }
+        () => {}
       );
   }
-
-
-
 }

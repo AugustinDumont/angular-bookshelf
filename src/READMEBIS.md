@@ -45,7 +45,7 @@ Compenent's library
 $ ng add ng-zorro-antd
 ```
 
-Don't forget the diffrents imports in module.ts
+Don't forget the different imports in module.ts
 
 ### bootstrap
 

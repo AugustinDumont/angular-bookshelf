@@ -90,11 +90,7 @@
             ><img class="main-book-cover" src="../../assets/default.gif"
           /></ng-template>
           <div class="titleText">{{ element.title }}</div>
-          <nz-rate
-            [(ngModel)]="booksReviews[i]"
-            nzAllowHalf
-            nzDisabled
-          ></nz-rate>
+          <nz-rate [(ngModel)]="booksReviews[i]" nzDisabled></nz-rate>
         </div>
       </div>
     </div>
@@ -105,7 +101,7 @@
     <div
       class="ant-back-top ng-tns-c20-83 ng-trigger ng-trigger-fadeMotion ng-star-inserted"
     >
-      <div class="ant-back-top-content ng-tns-c20-83 ng-star-inserted" style="">
+      <div class="ant-back-top-content ng-tns-c20-83 ng-star-inserted">
         <div class="ant-back-top-icon"></div>
       </div>
     </div>

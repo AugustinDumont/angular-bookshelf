@@ -41,7 +41,6 @@ export class ArticleComponent implements OnInit {
   myRateString: String;
   myVoteToString: string[] = ["ONE", "TWO", "THREE", "FOUR", "FIVE"];
   isRent: boolean;
-  isOwner: boolean = this.QueriesService.isNotBorrower;
   owner: string = "null";
 
   // get apollo
@@ -243,19 +242,14 @@ export class ArticleComponent implements OnInit {
 
   returnProcess() {
     this.QueriesService.returnBook(this.apollo, this.target);
+  }
 
-    this.isOwner = this.QueriesService.isNotBorrower;
-
-    if (this.isOwner) {
-      document.getElementById("report").style.display = "block";
-      document.getElementById("report").classList.remove("slideOutDown");
-      document.getElementById("report").classList.add("slideInUp");
-
-      setTimeout(function() {
-        document.getElementById("report").classList.remove("slideInUp");
-        document.getElementById("report").classList.add("slideOutDown");
-        this.isOwner = false;
-      }, 9000);
+  checkOwnership() {
+    if (this.QueriesService.isNotBorrower) {
+      document.querySelector(".return").setAttribute("disabled", "");
+      document
+        .querySelector(".return")
+        .setAttribute("title", "You cannot return a book you're not borrowing");
     }
   }
 }

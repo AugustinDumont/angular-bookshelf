@@ -6,7 +6,7 @@
 
 ## Description
 
-A single page application with Angular where the BeCodians have access to a list of books available in their campus. They can check their availability, rent/return them, rate them or leave a comment.
+A single page application with Angular where the BeCodians have access to a list of books available in their campus. They can check their availability, borrow/return them, rate them or leave a comment.
 
 ## Instructions
 
@@ -15,7 +15,7 @@ A single page application with Angular where the BeCodians have access to a list
 - [x] Register and login
 - [x] List of all the books
 - [x] Detailed information for each book with availability, rating and comments
-- [x] Possibility to rent/return a book
+- [x] Possibility to borrow/return a book
 - [x] Possibility to rate a book
 - [x] Possibility to leave a comment
 - [ ] Use of RX.js
