@@ -7,8 +7,12 @@
   </header>
 
   <!-- LOADING -->
-  <div class="d-flex justify-content-center mt-5" *ngIf="!isLoaded">
-    Loading...
+  <div class="d-flex justify-content-center text-center mt-5" *ngIf="!isLoaded">
+    <h5>
+      <i class="p-4" nz-icon nzType="loading" nzTheme="outline"></i>
+      <br />
+      Loading
+    </h5>
   </div>
 
   <!-- MAIN -->
