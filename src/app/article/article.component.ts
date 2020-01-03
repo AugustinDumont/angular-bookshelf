@@ -172,14 +172,14 @@ export class ArticleComponent implements OnInit {
   displayForm() {
     if (!this.isDisplayForm) {
       let element = document.getElementById("postComment");
-      element.classList.remove("bounceOutDown");
-      element.classList.add("bounceInDown");
+      element.classList.remove("fadeOutUp");
+      element.classList.add("fadeInDown");
       element.style.display = "block";
       this.isDisplayForm = true;
     } else {
       let element = document.getElementById("postComment");
-      element.classList.remove("bounceInDown");
-      element.classList.add("bounceOutDown");
+      element.classList.remove("fadeInDown");
+      element.classList.add("fadeOutUp");
       this.isDisplayForm = false;
     }
   }

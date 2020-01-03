@@ -42,7 +42,7 @@
         </p>
       </section>
 
-      <section id="comment_block">
+      <section>
         <h3 class="info_title">Reviews</h3>
         <p class="info_content" *ngFor="let element of comments; let i = index">
           {{ commentAuthor[i] }} :
@@ -52,20 +52,24 @@
 
       <section>
         <!-- Toggle form to write a comment -->
-        <button id="button_block" (click)="displayForm()" *ngIf="isEdit">
-          Edit Review
+        <button (click)="displayForm()" *ngIf="isEdit">
+          <i id="icon" nz-icon nzType="edit" nzTheme="outline"></i>
+          <span>Edit Review</span>
         </button>
-        <button id="button_block" (click)="displayForm()" *ngIf="!isEdit">
-          Add Review
+        <button (click)="displayForm()" *ngIf="!isEdit">
+          <i id="icon" nz-icon nzType="edit" nzTheme="outline"></i>
+          <span>Add Review</span>
         </button>
-        <button id="button_block" *ngIf="available" (click)="rentProcess()">
+        <button *ngIf="available" (click)="rentProcess()">
           Rent the book
         </button>
-        <button id="button_block" *ngIf="!available" (click)="returnProcess()">
+        <button *ngIf="!available" (click)="returnProcess()">
           Return the book
         </button>
         <div id="postComment" class="animated">
-          <button (click)="displayForm()">X</button>
+          <button (click)="displayForm()">
+            <i nz-icon nzType="close" nzTheme="outline"></i>
+          </button>
           <textarea
             *ngIf="!isEdit"
             id="comment"
@@ -74,26 +78,21 @@
           ></textarea>
           <textarea
             *ngIf="isEdit"
-            id="editComment"
             placeholder="{{ toEdit }}"
             name="Comment note"
           ></textarea>
-          <nz-rate class="rateForm" [(ngModel)]="myRateVote"></nz-rate>
-          <button
-            class="comment_button"
-            *ngIf="!isEdit"
-            (click)="commentProcess()"
-          >
+          <nz-rate [(ngModel)]="myRateVote"></nz-rate>
+          <button *ngIf="!isEdit" (click)="commentProcess()">
             Add
           </button>
-          <button class="comment_button" *ngIf="isEdit" (click)="editProcess()">
+          <button *ngIf="isEdit" (click)="editProcess()">
             Edit
           </button>
         </div>
       </section>
 
       <a href="/library" id="close_block">
-        Back to library
+        Back to library <i nz-icon nzType="right" nzTheme="outline"></i>
       </a>
     </div>
   </div>

@@ -1,14 +1,14 @@
 #postComment {
   display: none;
-  width: 400px;
+  width: 450px;
   height: auto;
-  background-color: #2b165b;
+  background-color: #55dbcb;
   color: #fff;
   position: absolute;
   right: 0;
   bottom: 0px;
   z-index: 50;
-  padding: 40px;
+  padding: 10px 25px;
 
   textarea {
     display: block;
@@ -18,25 +18,33 @@
 
   button {
     display: block;
-    padding: 10px;
-    color: white;
-    margin-top: 7px;
+    margin-top: 20px !important;
   }
 }
 
 button {
   padding: 10px 20px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  background-color: #2b165b;
-  color: #fff;
-  font-family: sans-serif;
-  text-decoration: none;
+  margin-right: 20px;
+  background: linear-gradient(to top, #55dbcb, #75e4b3);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  }
+}
+
+#icon {
+  margin-right: 15px;
 }
 
 #comment {
   margin-bottom: 15px;
-  width: 300px;
+  width: 400px;
   height: 200px;
 }
 
@@ -75,10 +83,6 @@ button {
   float: right;
 }
 
-.rateForm {
-  margin-left: 19px;
-}
-
 .info_title {
   font-size: 30px;
   font-family: sans-serif;
@@ -89,13 +93,6 @@ button {
 .info_content {
   font-size: 16px;
   font-family: sans-serif;
-}
-
-#button_block {
-  padding: 15px 50px;
-  margin: 10px;
-  text-decoration: none;
-  border: none;
 }
 
 section {
@@ -110,23 +107,9 @@ section {
 
 #close_block {
   position: absolute;
-  position: absolute;
-  top: 70px;
+  top: 60px;
   right: 80px;
-}
-
-/** RENT BTN **/
-#rentBtn {
-  position: fixed;
-  top: 45%;
-  left: 5%;
-  z-index: 100;
-}
-#returnBtn {
-  position: fixed;
-  top: 55%;
-  left: 5%;
-  z-index: 100;
+  font-size: 16px;
 }
 
 .truevalidity {

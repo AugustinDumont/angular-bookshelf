@@ -7,7 +7,7 @@
   </header>
 
   <!-- LOADING -->
-  <div class="d-flex justify-content-center" *ngIf="!isLoaded">
+  <div class="d-flex justify-content-center mt-5" *ngIf="!isLoaded">
     Loading...
   </div>
 
@@ -18,7 +18,7 @@
         <div class="Search">
           <nz-divider nzText="Books-List" id="subNz"></nz-divider>
           <div id="searchBar">
-            <span class="searchText">Campus : </span>
+            <span class="searchText">Campus: </span>
             <select
               class="Filters"
               id="filterSchool"
@@ -30,7 +30,7 @@
               ><option>Charleroi </option>
             </select>
 
-            <span class="searchText">Langue : </span>
+            <span class="searchText">Language: </span>
             <select
               class="Filters"
               id="filterLang"
@@ -41,7 +41,7 @@
               ><option>English </option></select
             >
 
-            <span class="searchText">Available : </span>
+            <span class="searchText">Availability: </span>
             <select
               class="Filters"
               id="filterAvailable"
@@ -95,4 +95,15 @@
       </div>
     </div>
   </div>
+
+  <!-- BACK TO TOP -->
+  <nz-back-top _ngcontent-docs-c17="" class="ng-tns-c20-83">
+    <div
+      class="ant-back-top ng-tns-c20-83 ng-trigger ng-trigger-fadeMotion ng-star-inserted"
+    >
+      <div class="ant-back-top-content ng-tns-c20-83 ng-star-inserted" style="">
+        <div class="ant-back-top-icon"></div>
+      </div>
+    </div>
+  </nz-back-top>
 </main>
