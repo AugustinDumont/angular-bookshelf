@@ -30,7 +30,7 @@ export class LibraryComponent implements OnInit {
     this.QueriesService.isEdit = false;
     this.AuthService.usrToken = localStorage.getItem("token");
 
-    // Set some variables for loading displaying
+    // Set some variables for loading display
     this.isLoaded = false;
 
     this.apollo = apollo;
@@ -96,10 +96,7 @@ export class LibraryComponent implements OnInit {
       element.classList.add("bounceInDown");
       element.style.display = "block";
       this.isDisplayForm = true;
-    }
-
-    // Hide and show the form
-    else {
+    } else {
       let element = document.getElementById("addBookForm");
       element.classList.remove("bounceInDown");
       element.classList.add("bounceOutDown");
@@ -238,7 +235,7 @@ export class LibraryComponent implements OnInit {
     }
   }
 
-  // Filter method;
+  // Filter methods;
 
   filterProcess() {
     this.books = this.unFiltered;
